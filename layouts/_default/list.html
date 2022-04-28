@@ -9,7 +9,7 @@
   </ul>
 
   <ul id="tags">
-    {{ range (.GetTerms ".Tags") }}
+    {{ range (.GetTerms "Tags") }}
         <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
     {{ end }}
   </ul>

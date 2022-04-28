@@ -2,10 +2,6 @@
 
 <h1>{{ .Title | markdownify }}</h1>
 
-<span>
-  {{ .Date | time.Format ":date_full" }}
-</span>
-
 {{ .Content }}
 
 <h2>{{ .Site.Params.main.latestPublishHeader | default "" }}</h2>
