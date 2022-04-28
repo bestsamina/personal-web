@@ -8,4 +8,15 @@
     {{ end }}
   </ul>
 
+  <ul id="tags">
+    {{ range (.GetTerms ".Tags") }}
+        <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+    {{ end }}
+  </ul>
+  <ul id="categories">
+    {{ range (.GetTerms "Categories") }}
+        <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+    {{ end }}
+  </ul>
+
 {{ partial "footer" .}}

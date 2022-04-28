@@ -1,7 +1,13 @@
 {{ partial "header" .}}
 
 <h1>{{ .Title | markdownify }}</h1>
-
+<span>
+    {{ .Date | time.Format ":date_full" }}
+</span>
+<br><br>
+<span>
+  {{ .TableOfContents }}
+</span>
 {{ .Content }}
 
 {{ partial "footer" .}}
