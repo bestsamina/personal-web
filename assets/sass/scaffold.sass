@@ -8,7 +8,7 @@ html
   background-color: $primary-color
 
 body
-  background-color: white
+  background-color: $primary-color
   margin: 0
   min-height: 100%
   font-family: $font-family_main
@@ -23,6 +23,16 @@ ul
 
 li
   line-height: $line-height_main
+
+pre code
+  display: block
+  background: none
+  white-space: pre
+  -webkit-overflow-scrolling: touch
+  overflow-x: scroll
+  max-width: 100%
+  min-width: 100px
+  padding: 0
 
 p::selection
   background-color: $grey-300
@@ -332,6 +342,5 @@ img.gopher
         +transform(rotate(-45deg))
       &:nth-child(2)
         display: none
-
 
 // MOBILE ONLY END
