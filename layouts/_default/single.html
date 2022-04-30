@@ -3,21 +3,8 @@
 <h1>{{ .Title | markdownify }}</h1>
 
 {{ if .Params.tags }}
-<span>
-    {{ .Date | time.Format ":date_full" }}
-</span>
-<br><br>
-{{ with .Params.tags }}
-<ul id="tags">
-  {{ range . }}
-    <li> <a href="{{ "tags" | absURL }}{{ . | urlize }}">{{ . }}</a> </li>
-  {{ end }}
-</ul>
-{{ end }}
+{{ partial "post/information" . }}
 
-<span>
-  {{ .TableOfContents }}
-</span>
 {{end}}
 {{ .Content }}
 
